@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gideon Kiprono | Portfolio</title>
+<meta name="description" content="Portfolio of Gideon Kiprono: projects, skills and contact details.">
+<meta property="og:title" content="Gideon Kiprono | Portfolio">
+<meta property="og:description" content="Projects, skills and contact details.">
+<style>
+  :root {
+    --bg: #0e1116;
+    --card: #161b22;
+    --border: #262d38;
+    --text: #e6edf3;
+    --muted: #8b96a5;
+    --accent: #4ade80;
+    --accent-ink: #06210f;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fafaf7;
+      --card: #ffffff;
+      --border: #e4e4dd;
+      --text: #14181f;
+      --muted: #5b6573;
+      --accent: #15803d;
+      --accent-ink: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  .logo { font-weight: 700; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  .nav ul { display: flex; gap: 22px; list-style: none; font-size: 0.95rem; color: var(--muted); }
+  .nav ul a:hover { color: var(--text); }
+
+  .hero { padding: 96px 0 72px; }
+  .eyebrow { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin-bottom: 14px; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 18px; }
+  .hero p.lead { color: var(--muted); font-size: 1.15rem; max-width: 600px; margin-bottom: 28px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 8px;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border);
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn:hover { transform: translateY(-1px); }
+
+  section { padding: 64px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.7rem; letter-spacing: -0.02em; margin-bottom: 28px; }
+
+  .about { display: grid; gap: 28px; grid-template-columns: 1.4fr 1fr; }
+  .about p { color: var(--muted); margin-bottom: 14px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
+  .chip {
+    padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px;
+    font-size: 0.88rem; color: var(--muted); background: var(--card);
+  }
+
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 22px; display: flex; flex-direction: column; gap: 12px;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card h3 { font-size: 1.1rem; }
+  .card p { color: var(--muted); font-size: 0.95rem; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span { font-size: 0.78rem; color: var(--accent); }
+  .links { display: flex; gap: 16px; font-size: 0.9rem; font-weight: 600; }
+  .links a:hover { color: var(--accent); }
+
+  .contact p { color: var(--muted); max-width: 520px; margin-bottom: 22px; }
+  footer { padding: 32px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.88rem; }
+
+  @media (max-width: 680px) {
+    .about { grid-template-columns: 1fr; }
+    .nav ul { gap: 14px; font-size: 0.88rem; }
+    .hero { padding: 64px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo">gideon<span>.</span>kiprono</a>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <p class="eyebrow">Hi, I'm Gideon Kiprono</p>
+      <h1 id="headline">I build things for the web.</h1>
+      <p class="lead" id="tagline">Short one-line pitch about what you do and what you care about. Edit me in index.html.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <div class="about">
+        <div id="about-text"></div>
+        <div class="skills" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Open to opportunities, collaborations and freelance work. The best way to reach me is email.</p>
+      <div class="btns" id="contact-links"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="year"></span> Gideon Kiprono</div>
+</footer>
+
+<script>
+/* =====================================================
+   EDIT EVERYTHING BELOW. The page builds itself from this.
+   ===================================================== */
+const profile = {
+  headline: "I build solutions that solve specific problems for the web.",
+  tagline: "I build solutions that solve real-world problems through full-stack web development, data analytics, automation, and intelligent systems, leveraging JavaScript (MERN Stack), Python, SQL, and modern technologies.",
+  about: [
+    "With a strong foundation in Computer Science, I focus on developing scalable applications, transforming data into actionable insights, and exploring Machine Learning and Artificial Intelligence to build innovative, impactful solutions."
+  ],
+  skills: { "Full-Stack Development": [ "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB"
+  ],
+
+  "Data Analytics & BI": [
+    "SQL",
+    "PostgreSQL",
+    "MySQL",
+    "Power BI",
+    "Microsoft Excel",
+    "Data Modelling",
+    "Data Visualization",
+    "Data Cleaning"
+  ],
+
+  "Python & Data Science": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Exploratory Data Analysis"
+  ],
+
+  "Development Tools": [
+    "Git",
+    "GitHub",
+    "VS Code",
+    "Vercel"
+  ]
+},
+  contact: [
+    { label: "Email me", href: "mailto:gideonkiprono6369.com", primary: true },
+    { label: "GitHub", href: "https://github.com/Gideon-Kiprono" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/gideon-kiprono" }
+  ]
+};
+
+const projects = [
+  {
+    title: "Project One",
+    description: "One or two sentences: what problem it solves, who it is for, and the result.",
+    tags: ["JavaScript", "API"],
+    live: "https://example.com",
+    code: "https://github.com/your-username/project-one"
+  },
+  {
+    title: "Project Two",
+    description: "Describe what you built and one thing you learned or are proud of.",
+    tags: ["React", "CSS"],
+    live: "",
+    code: "https://github.com/your-username/project-two"
+  },
+  {
+    title: "Project Three",
+    description: "Keep it short. Link to a live demo whenever you can.",
+    tags: ["Python", "Data"],
+    live: "https://example.com",
+    code: ""
+  }
+];
+/* ===================== END OF EDITABLE AREA ===================== */
+
+const $ = id => document.getElementById(id);
+const el = (tag, attrs = {}, text) => {
+  const n = document.createElement(tag);
+  Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
+  if (text) n.textContent = text;
+  return n;
+};
+
+$("headline").textContent = profile.headline;
+$("tagline").textContent = profile.tagline;
+profile.about.forEach(t => $("about-text").appendChild(el("p", {}, t)));
+Object.entries(profile.skills).forEach(([category, skills]) => {
+  const group = document.createElement("div");
+  group.className = "skill-group";
+
+  const heading = document.createElement("h3");
+  heading.textContent = category;
+  group.appendChild(heading);
+
+  const container = document.createElement("div");
+  container.className = "skills";
+
+  skills.forEach(skill => {
+    const span = document.createElement("span");
+    span.className = "chip";
+    span.textContent = skill;
+    container.appendChild(span);
+  });
+
+  group.appendChild(container);
+  document.getElementById("skills").appendChild(group);
+});
+
+projects.forEach(p => {
+  const card = el("article", { class: "card" });
+  card.appendChild(el("h3", {}, p.title));
+  card.appendChild(el("p", {}, p.description));
+  const tags = el("div", { class: "tags" });
+  p.tags.forEach(t => tags.appendChild(el("span", {}, "#" + t)));
+  card.appendChild(tags);
+  const links = el("div", { class: "links" });
+  if (p.live) links.appendChild(el("a", { href: p.live, target: "_blank", rel: "noopener" }, "Live demo ↗"));
+  if (p.code) links.appendChild(el("a", { href: p.code, target: "_blank", rel: "noopener" }, "Code ↗"));
+  card.appendChild(links);
+  $("project-grid").appendChild(card);
+});
+
+profile.contact.forEach(c => {
+  const a = el("a", { class: "btn" + (c.primary ? " primary" : ""), href: c.href }, c.label);
+  if (!c.href.startsWith("mailto:")) { a.target = "_blank"; a.rel = "noopener"; }
+  $("contact-links").appendChild(a);
+});
+
+$("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
